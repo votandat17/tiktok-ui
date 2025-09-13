@@ -1,0 +1,31 @@
+.Fixed-Top-Container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    min-width: 384px;
+    display: inline-flex;
+    height: 48px;
+    padding: 8px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 10px 0px;
+}
+
+.flex-container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+}
+
+.VerticalDivider {
+    height: 20px;
+    width: 1px;
+    margin-right: 18px;
+    background-color: rgba(0, 0, 0, 0.12);
+    align-self: center;
+}

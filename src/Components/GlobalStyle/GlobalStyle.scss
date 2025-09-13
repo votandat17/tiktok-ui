@@ -3,10 +3,17 @@
 
 :root {
     --primary: #fe2c55;
+    --primary-hover: #ea284e;
+    --black: #000;
+    --white: #fff;
+    --white-hover: rgba(0, 0, 0, 0.05);
+    --text-color: #202020;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -16,4 +23,14 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+.active {
+    background-color: #ea284e;
 }
