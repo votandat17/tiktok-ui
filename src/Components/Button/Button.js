@@ -5,7 +5,7 @@ import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Button({ to, href, onClick, primary, large, normal, children, ...passProps }) {
+function Button({ to, href, onClick, primary, large, normal, searchItem, moreItems, circles, children, ...passProps }) {
     let Component = 'button';
     const props = {
         onClick,
@@ -22,6 +22,9 @@ function Button({ to, href, onClick, primary, large, normal, children, ...passPr
         primary,
         large,
         normal,
+        searchItem,
+        moreItems,
+        circles,
     });
 
     return (

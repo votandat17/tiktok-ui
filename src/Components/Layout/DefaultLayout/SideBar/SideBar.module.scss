@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    top: 0;
     flex-shrink: 0;
     margin-left: 24px;
 }
@@ -55,4 +56,28 @@
     color: rgba(0, 0, 0, 0.34);
     background-color: rgb(242, 242, 242);
     cursor: pointer;
+
+    &::placeholder {
+        font-size: 24px;
+    }
 }
+
+.more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+// .footer-container {
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         left: 8px;
+//         right: 8px;
+//         top: 0px;
+//         height: 1px;
+//         background: rgba(22, 24, 35, 0.12);
+//         transform: scaleY(0.5);
+//     }
+// }

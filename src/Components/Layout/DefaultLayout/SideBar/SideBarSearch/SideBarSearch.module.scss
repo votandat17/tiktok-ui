@@ -47,38 +47,6 @@
     border-radius: 99px;
 }
 
-.guess-search-title {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(22, 24, 35, 0.75);
-    padding: 5px 12px 3px;
-}
-
-.search-list {
-    width: 100%;
-    max-height: min(-150px + 100vh, 734px);
-    padding-inline-start: 0px;
-    overflow: hidden auto;
-    list-style-type: none;
-    box-sizing: border-box;
-    overflow: hidden auto;
-}
-
-.list-item {
-    display: flex;
-    align-items: center;
-    padding: 9px 16px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-}
-
-.item-icon {
-}
-
 .item-text {
     font-size: 16px;
     font-weight: 600;

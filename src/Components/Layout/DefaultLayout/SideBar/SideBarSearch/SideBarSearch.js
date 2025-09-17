@@ -5,8 +5,24 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faCircleDot, faCircleUp } from '@fortawesome/free-regular-svg-icons';
 
 import styles from './SideBarSearch.module.scss';
+import SideBarSearchItems from './SideBarSearchItems/SideBarSearchItems';
 
 const cx = classNames.bind(styles);
+
+const SEARCH_ITEMS = [
+    {
+        icon: <FontAwesomeIcon icon={faCircleDot} />,
+        title: 'Sơn Tùng MTP',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleUp} />,
+        title: 'Mono',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleUp} />,
+        title: 'lyric nhạc',
+    },
+];
 
 function SideBarSearch() {
     return (
@@ -26,27 +42,7 @@ function SideBarSearch() {
                     </form>
                 </div>
             </div>
-            <ul className={cx('search-list')}>
-                <div className={cx('guess-search-title')}>You may like</div>
-                <li className={cx('list-item')}>
-                    <div className={cx('item-icon')}>
-                        <FontAwesomeIcon icon={faCircleDot} />
-                    </div>
-                    <h4 className={cx('item-text')}>Son Tung MTP</h4>
-                </li>
-                <li className={cx('list-item')}>
-                    <div className={cx('item-icon')}>
-                        <FontAwesomeIcon icon={faCircleUp} />
-                    </div>
-                    <h4 className={cx('item-text')}>Mono</h4>
-                </li>
-                <li className={cx('list-item')}>
-                    <div className={cx('item-icon')}>
-                        <FontAwesomeIcon icon={faCircleUp} />
-                    </div>
-                    <h4 className={cx('item-text')}>lyric nhạc</h4>
-                </li>
-            </ul>
+            <SideBarSearchItems data={SEARCH_ITEMS} />
         </div>
     );
 }
