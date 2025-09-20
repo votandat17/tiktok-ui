@@ -1,0 +1,32 @@
+.wrapper {
+    position: relative;
+    padding: 8px 0 0 8px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 0px;
+        height: 1px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+    }
+}
+
+.footer-text {
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 0px;
+    font-weight: 700;
+    color: rgba(22, 24, 35, 0.5);
+    cursor: pointer;
+}
+.copyright {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+    color: rgba(22, 24, 35, 0.5);
+}

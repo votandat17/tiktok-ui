@@ -5,17 +5,35 @@ import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Button({ to, href, onClick, primary, large, normal, searchItem, moreItems, circles, children, ...passProps }) {
+function Button({
+    to,
+    href,
+    onClick,
+    primary,
+    large,
+    leftIcon,
+    rightIcon,
+    normal,
+    searchItem,
+    moreItems,
+    circles,
+    className,
+    fixxed,
+    children,
+    ...passProps
+}) {
     let Component = 'button';
     const props = {
-        onClick,
+        onClick: onClick,
         ...passProps,
     };
 
     if (to) {
-        return (props.to = to), (Component = Link);
+        props.to = to;
+        Component = Link;
     } else if (href) {
-        return (props.href = href), (Component = 'a');
+        props.href = href;
+        Component = 'a';
     }
 
     const classes = cx('wrapper', {
@@ -25,11 +43,17 @@ function Button({ to, href, onClick, primary, large, normal, searchItem, moreIte
         searchItem,
         moreItems,
         circles,
+        fixxed,
+        [className]: className,
     });
 
     return (
         <Component className={classes} {...props}>
-            <span>{children}</span>
+            <span>
+                {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+                {children}
+                {rightIcon && <span>{rightIcon}</span>}
+            </span>
         </Component>
     );
 }

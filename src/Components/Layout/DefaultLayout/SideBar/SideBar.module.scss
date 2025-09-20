@@ -1,26 +1,28 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
     top: 0;
     flex-shrink: 0;
     margin-left: 24px;
 }
 
+//side bar header
 .header-sidebar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
+//logo
 .logo {
     padding-top: 20px;
     padding-right: 16px;
     cursor: pointer;
 }
 
+//search container
 .search {
     position: relative;
     display: inline-flex;
@@ -62,22 +64,54 @@
     }
 }
 
+//sidebar button
+.sidebar-item {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.sidebar-btn {
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+//login button
+.sidebar-login {
+    margin-bottom: 16px;
+}
+
+//more button
+.more {
+    height: 40px;
+    margin-bottom: 16px;
+}
+
 .more-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 208px;
+    height: 40px;
     background-color: transparent;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
 }
 
-// .footer-container {
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         left: 8px;
-//         right: 8px;
-//         top: 0px;
-//         height: 1px;
-//         background: rgba(22, 24, 35, 0.12);
-//         transform: scaleY(0.5);
-//     }
-// }
+.more-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+//footer
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
